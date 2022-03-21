@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Montserrat";
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+.logo {
+    position: fixed;
+    margin: auto;
+    top: 20%;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.grid{
+    background: url(../images/dots.png) repeat;
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.65;
+    z-index: 10;
+}
+
+.video{
+    background: url(./images/nn2.mp4) infinite;
+    height: calc(100vw / 2 - 4px);
+    width: (100vw / 2);
+    object-fit: fill;
+    overflow:visible;
+    box-sizing: content-box;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.phone{
+    border-radius:15px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat";
+    font-size: 2vh;
+    top: 5vw;
+    z-index: 10;
+    left: 60vw;
+    opacity: 1;
+    z-index: 101;
+}
+
+
+/* SLIDER style */
+
+
+.slider{
+    overflow: hidden;
+    padding-bottom: -100%;
+}
+
+.slider figure{
+    z-index: 100;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+    justify-content: center;
+}
+
+.slider figure img{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 50vw;
+    height: 65vw;
+    float: left;
+    object-fit: cover;
+}
+
+@keyframes slider{
+    0%{
+        left:0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-50vw;
+    }
+    45%{
+        left:-50vw;
+    }
+    50%{
+        left:-100vw;
+    }
+    70%{
+        left:-100vw;
+    }
+    75%{
+        left:-150vw;
+    }
+    95%{
+        left:-150vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .slider figure img{
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        width: 100vw;
+        height: 100vw;
+        float: left;
+        object-fit: cover;
+    }
+    @keyframes slider{
+        0%{
+            left:0;
+        }
+        20%{
+            left:0;
+        }
+        25%{
+            left:-100vw;
+        }
+        45%{
+            left:-100vw;
+        }
+        50%{
+            left:-200vw;
+        }
+        70%{
+            left:-200vw;
+        }
+        75%{
+            left:-300vw;
+        }
+        95%{
+            left:-300vw;
+        }
+    }
+}
+
+.afisha-header{
+    position: relative;
+    font-size: 5vw;
+    z-index: 1000;
+    color: white;
+}
+
+.afisha-down{
+    position: absolute;
+    z-index: 101;
+    width:25vw;
+    height:25vw;
+    top:36vw;
+}
+
+.center{
+    top:15vw;
+    width: 40vw;
+    height: 40vw;
+    left: 30vw;
+    z-index: 101;
+}
+
+@media screen and (max-width:650px) {
+    .video{
+        background: url(./images/nn2.mp4) infinite;
+        width: 200vw;
+        height: calc(200vw / 2 - 4px);
+        object-fit: fill;
+        overflow:visible;
+        box-sizing: content-box;
+        position: relative;
+        left: -45vw;
+        zoom: 0.9;
+        overflow: hidden;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .afisha-down{
+        position: absolute;
+        z-index: 101;
+        width:40vw;
+        height:40vw;
+        left: -4vw;
+        top:65vw;
+    }
+    
+    .center{
+        top:42vw;
+        width: 40vw;
+        height: 40vw;
+        left: 30vw;
+        z-index: 101;
+    }
+}
+
+/* contact info 
+
+
+**not in use
+
+
+*/
+
+/*.find-info{
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 2vw 1vw 4vw 5vw;
+}
+
+.contact-info span{
+    text-align: center; 
+    position: absolute;
+    color:white;
+    font-size: 20px;
+}*/
+
+
+
+/*maps styles*/
+
+.maps-block{
+    background-color: black;
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    height: auto;
+    padding-bottom: 2vw;
+}
+
+.maps{
+    padding-left: 5vw;
+    padding-top: 5vw;
+    padding-right: 5vw;
+    height: 60vh;
+    position: absolute;
+    z-index: 100;
+}
+
+
+/*footer styles*/
+
+footer{
+    overflow: hidden;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding: calc(2vw + 60vh) 0 2vw 0;
+    color: white;
+}
+
+.footer-block{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-block h3, h4{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+
+.footer-block h4{
+    font-size: 1.1rem;
+    font-style: italic;
+    color: gold;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+    text-decoration: none;
+}
+
+.socials a{
+    text-decoration: none;
+    color:#fff;
+}
