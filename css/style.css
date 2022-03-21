@@ -12,9 +12,8 @@ body {
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    overflow-x:hidden;
-}
-
+    overflow-x: hidden;
+}   
 
 .logo {
     position: fixed;
@@ -36,6 +35,7 @@ body {
     left: 0;
     opacity: 0.65;
     z-index: 10;
+    overflow: hidden;
 }
 
 .video{
@@ -46,8 +46,8 @@ body {
     overflow:visible;
     box-sizing: content-box;
     position: relative;
-    overflow: hidden;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
 }
 
 .phone{
@@ -75,11 +75,12 @@ body {
 .slider figure{
     z-index: 100;
     position: relative;
-    width: 500%;
+    width: 1000%;
     margin: 0;
     left: 0;
     animation: 15s slider infinite;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slider figure img{
@@ -87,10 +88,11 @@ body {
     padding-right: 3vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
-    width: 50vw;
+    width: 25vw;
     height: 65vw;
     float: left;
     object-fit: cover;
+    overflow: hidden;
 }
 
 @keyframes slider{
@@ -101,61 +103,22 @@ body {
         left:0;
     }
     25%{
-        left:-50vw;
+        left:-25vw;
     }
     45%{
-        left:-50vw;
+        left:-25vw;
     }
     50%{
-        left:-100vw;
+        left:-50vw;
     }
     70%{
-        left:-100vw;
+        left:-50vw;
     }
     75%{
-        left:-150vw;
+        left:-75vw;
     }
     95%{
-        left:-150vw;
-    }
-}
-
-@media screen and (max-width: 650px){
-    .slider figure img{
-        padding-left: 3vw;
-        padding-right: 3vw;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
-        width: 100vw;
-        height: 100vw;
-        float: left;
-        object-fit: cover;
-    }
-    @keyframes slider{
-        0%{
-            left:0;
-        }
-        20%{
-            left:0;
-        }
-        25%{
-            left:-100vw;
-        }
-        45%{
-            left:-100vw;
-        }
-        50%{
-            left:-200vw;
-        }
-        70%{
-            left:-200vw;
-        }
-        75%{
-            left:-300vw;
-        }
-        95%{
-            left:-300vw;
-        }
+        left:-75vw;
     }
 }
 
@@ -174,6 +137,15 @@ body {
     top:36vw;
 }
 
+.afisha-logo{
+    position: absolute;
+    z-index: 101;
+    width:50vw;
+    height:50vw;
+    top:0;
+    left:25vw;
+}
+
 .center{
     top:15vw;
     width: 40vw;
@@ -182,38 +154,7 @@ body {
     z-index: 101;
 }
 
-@media screen and (max-width:650px) {
-    .video{
-        background: url(./images/nn2.mp4) infinite;
-        width: 200vw;
-        height: calc(200vw / 2 - 4px);
-        object-fit: fill;
-        overflow:visible;
-        box-sizing: content-box;
-        position: relative;
-        left: -45vw;
-        zoom: 0.9;
-        overflow: hidden;
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    }
 
-    .afisha-down{
-        position: absolute;
-        z-index: 101;
-        width:40vw;
-        height:40vw;
-        left: -4vw;
-        top:65vw;
-    }
-    
-    .center{
-        top:42vw;
-        width: 40vw;
-        height: 40vw;
-        left: 30vw;
-        z-index: 101;
-    }
-}
 
 /* contact info 
 

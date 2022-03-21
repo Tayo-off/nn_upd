@@ -6,13 +6,22 @@
         <!-- bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
 
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script>
+            if (document.documentElement.clientWidth <= 850) {
+                document.location.href = "./m_index.html";
+            } 
+        </script>
     </head>
     <body>
         <div class="video-block">
             <div class="grid"></div>
+            <img src="images/nn2.png" alt class="afisha-logo">
             <img src="images/afisha.png" alt class="afisha-down">
             <video class="video" width="100%" autoplay loop muted playsinline="true">
                 <source src="media/nn2.mp4" type="video/mp4">
